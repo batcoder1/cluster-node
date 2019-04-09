@@ -1,12 +1,12 @@
 # Cluster-node
 
-Test performance using cluster in node project.
+node project using cluster
 
 ## start
 
 npm start
 
-## Test performance 
+## Performance test 
 
 npm run artillery
 
