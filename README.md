@@ -6,6 +6,12 @@ Test performance using cluster in node project.
 
 npm start
 
+### users
+
+Get all user
+
+GET http://localhost:3000/users
+
 ## Test performance 
 
 npm run artillery

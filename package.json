@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node cluster.js",
+    "start": "nodemon cluster.js",
     "artillery": " artillery quick --count 1000 -n 20 http://localhost:3000/api/v1",
     "artillery:users": " artillery quick --count 1000 -n 20 http://localhost:3000/api/v1/users",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,8 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
-    "helmet": "^3.16.0"
+    "helmet": "^3.16.0",
+    "nodemon": "^1.18.11"
   },
   "devDependencies": {
     "artillery": "^1.6.0-27"

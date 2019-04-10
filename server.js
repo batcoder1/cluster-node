@@ -43,7 +43,6 @@ exports.start = async (workerID) => {
     app.set('trust proxy', 2)
 
 
-
     // define routes
     const router = express.Router()
     require('./routes/index.js')(router)
@@ -55,13 +54,14 @@ exports.start = async (workerID) => {
         })
     })
 
-    app.use('/api/v1', router)
+    app.use('/', router)
 
     // listen for requests
-    server.listen(port, '0.0.0.0', function () {
+   const server =  app.listen(port, '0.0.0.0', function () {
         console.log(new Date())
         console.log(`Connected to localhost on port ${port}`)
         console.log('hostname: ' + hostName)
         console.log('workerID: ' + workerID)
     })
+    return server;
 }
